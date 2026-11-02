@@ -1,4 +1,4 @@
-# Marketplace listing copy (Maina 888)
+# Marketplace listing copy (maina888)
 
 **Name:** TikTok Feed
 **Plugin id:** `mainasoftwares/tiktok-feed` (existing listing; keep this id so current installs get the update)

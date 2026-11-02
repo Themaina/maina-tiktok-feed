@@ -1,12 +1,12 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Http\Requests\Settings;
+namespace Maina888\TiktokFeed\Http\Requests\Settings;
 
 use Botble\Base\Rules\OnOffRule;
 use Botble\Support\Http\Requests\Request;
 use Illuminate\Validation\Validator;
-use MainaSuperintelligence\TiktokFeed\Support\TiktokFeedHelper;
-use MainaSuperintelligence\TiktokFeed\Support\TiktokUrl;
+use Maina888\TiktokFeed\Support\TiktokFeedHelper;
+use Maina888\TiktokFeed\Support\TiktokUrl;
 use Illuminate\Validation\Rule;
 
 class TiktokFeedSettingRequest extends Request

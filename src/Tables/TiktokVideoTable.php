@@ -1,6 +1,6 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Tables;
+namespace Maina888\TiktokFeed\Tables;
 
 use Botble\Table\Abstracts\TableAbstract;
 use Botble\Table\Actions\DeleteAction;
@@ -16,7 +16,7 @@ use Botble\Table\Columns\ImageColumn;
 use Botble\Table\Columns\NameColumn;
 use Botble\Table\Columns\StatusColumn;
 use Botble\Table\HeaderActions\CreateHeaderAction;
-use MainaSuperintelligence\TiktokFeed\Models\TiktokVideo;
+use Maina888\TiktokFeed\Models\TiktokVideo;
 use Illuminate\Database\Eloquent\Builder;
 
 class TiktokVideoTable extends TableAbstract

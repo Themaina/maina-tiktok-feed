@@ -1,11 +1,11 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Http\Controllers\Settings;
+namespace Maina888\TiktokFeed\Http\Controllers\Settings;
 
 use Botble\Setting\Http\Controllers\SettingController;
-use MainaSuperintelligence\TiktokFeed\Forms\Settings\TiktokFeedSettingForm;
-use MainaSuperintelligence\TiktokFeed\Http\Requests\Settings\TiktokFeedSettingRequest;
-use MainaSuperintelligence\TiktokFeed\Support\TiktokFeedHelper;
+use Maina888\TiktokFeed\Forms\Settings\TiktokFeedSettingForm;
+use Maina888\TiktokFeed\Http\Requests\Settings\TiktokFeedSettingRequest;
+use Maina888\TiktokFeed\Support\TiktokFeedHelper;
 use Illuminate\Support\Arr;
 
 class TiktokFeedSettingController extends SettingController

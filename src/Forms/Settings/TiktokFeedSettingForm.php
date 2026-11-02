@@ -1,6 +1,6 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Forms\Settings;
+namespace Maina888\TiktokFeed\Forms\Settings;
 
 use Botble\Base\Forms\FieldOptions\CheckboxFieldOption;
 use Botble\Base\Forms\FieldOptions\NumberFieldOption;
@@ -13,8 +13,8 @@ use Botble\Base\Forms\Fields\OnOffCheckboxField;
 use Botble\Base\Forms\Fields\SelectField;
 use Botble\Base\Forms\Fields\TextField;
 use Botble\Setting\Forms\SettingForm;
-use MainaSuperintelligence\TiktokFeed\Http\Requests\Settings\TiktokFeedSettingRequest;
-use MainaSuperintelligence\TiktokFeed\Support\TiktokFeedHelper;
+use Maina888\TiktokFeed\Http\Requests\Settings\TiktokFeedSettingRequest;
+use Maina888\TiktokFeed\Support\TiktokFeedHelper;
 
 class TiktokFeedSettingForm extends SettingForm
 {

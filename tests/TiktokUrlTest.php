@@ -1,8 +1,8 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Tests;
+namespace Maina888\TiktokFeed\Tests;
 
-use MainaSuperintelligence\TiktokFeed\Support\TiktokUrl;
+use Maina888\TiktokFeed\Support\TiktokUrl;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 

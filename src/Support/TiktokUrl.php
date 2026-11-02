@@ -1,6 +1,6 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Support;
+namespace Maina888\TiktokFeed\Support;
 
 /**
  * Parses TikTok links without any framework dependency, so it can be unit tested on its own.

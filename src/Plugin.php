@@ -1,6 +1,6 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed;
+namespace Maina888\TiktokFeed;
 
 use Botble\PluginManagement\Abstracts\PluginOperationAbstract;
 use Botble\Setting\Facades\Setting;

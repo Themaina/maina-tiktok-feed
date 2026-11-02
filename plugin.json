@@ -1,11 +1,11 @@
 {
     "id": "mainasoftwares/tiktok-feed",
     "name": "TikTok Feed",
-    "namespace": "MainaSuperintelligence\\TiktokFeed\\",
-    "provider": "MainaSuperintelligence\\TiktokFeed\\Providers\\TiktokFeedServiceProvider",
-    "author": "Maina 888",
-    "url": "https://github.com/Themaina/maina-tiktok-feed",
-    "version": "1.1.0",
+    "namespace": "Maina888\\TiktokFeed\\",
+    "provider": "Maina888\\TiktokFeed\\Providers\\TiktokFeedServiceProvider",
+    "author": "maina888",
+    "url": "https://mainax.vercel.app",
+    "version": "1.1.1",
     "description": "Floating TikTok video feed for your storefront: a swipeable video panel with a Shop Now button per video, a follow link, page targeting and a privacy mode that loads nothing from TikTok until tapped.",
     "minimum_core_version": "7.3.0"
 }

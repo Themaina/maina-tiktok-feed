@@ -1,8 +1,13 @@
 # Changelog
 
+## 1.1.1
+- Made with passion by maina888: author and links now point to mainax.vercel.app.
+- PHP namespace is now `Maina888\TiktokFeed`. Clear caches after updating (`php artisan optimize:clear`).
+- New "Support this project" section and GitHub Sponsor link.
+
 ## 1.1.0
-- First public release on the Botble Marketplace, free under the MIT License, by Maina 888 (Maina Superintelligence Ltd).
-- Vendor namespace is now `MainaSuperintelligence\TiktokFeed`. The plugin id stays `mainasoftwares/tiktok-feed`, so existing installs update in place.
+- First public release on the Botble Marketplace, free under the MIT License, by maina888 (maina888).
+- Vendor namespace is now `Maina888\TiktokFeed`. The plugin id stays `mainasoftwares/tiktok-feed`, so existing installs update in place.
 - New: privacy mode. A cover image with a play button stands in for each video, and nothing loads from TikTok until the visitor taps play.
 - New: cover image per video, shown in privacy mode and in the admin list.
 - New: "Distance from the bottom on phones" setting, to clear bottom navigation bars such as Shofy's.

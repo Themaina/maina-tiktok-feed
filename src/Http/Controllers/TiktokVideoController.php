@@ -1,14 +1,14 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Http\Controllers;
+namespace Maina888\TiktokFeed\Http\Controllers;
 
 use Botble\Base\Http\Actions\DeleteResourceAction;
 use Botble\Base\Http\Controllers\BaseController;
 use Botble\Base\Supports\Breadcrumb;
-use MainaSuperintelligence\TiktokFeed\Forms\TiktokVideoForm;
-use MainaSuperintelligence\TiktokFeed\Http\Requests\TiktokVideoRequest;
-use MainaSuperintelligence\TiktokFeed\Models\TiktokVideo;
-use MainaSuperintelligence\TiktokFeed\Tables\TiktokVideoTable;
+use Maina888\TiktokFeed\Forms\TiktokVideoForm;
+use Maina888\TiktokFeed\Http\Requests\TiktokVideoRequest;
+use Maina888\TiktokFeed\Models\TiktokVideo;
+use Maina888\TiktokFeed\Tables\TiktokVideoTable;
 
 class TiktokVideoController extends BaseController
 {

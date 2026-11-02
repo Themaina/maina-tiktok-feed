@@ -1,9 +1,9 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Support;
+namespace Maina888\TiktokFeed\Support;
 
 use Botble\Setting\Facades\Setting;
-use MainaSuperintelligence\TiktokFeed\Models\TiktokVideo;
+use Maina888\TiktokFeed\Models\TiktokVideo;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Route;
 use Throwable;

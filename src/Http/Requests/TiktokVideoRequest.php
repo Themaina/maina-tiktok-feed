@@ -1,12 +1,12 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Http\Requests;
+namespace Maina888\TiktokFeed\Http\Requests;
 
 use Botble\Base\Enums\BaseStatusEnum;
 use Botble\Support\Http\Requests\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Validation\Validator;
-use MainaSuperintelligence\TiktokFeed\Support\TiktokUrl;
+use Maina888\TiktokFeed\Support\TiktokUrl;
 
 class TiktokVideoRequest extends Request
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Forms;
+namespace Maina888\TiktokFeed\Forms;
 
 use Botble\Base\Forms\FieldOptions\MediaImageFieldOption;
 use Botble\Base\Forms\FieldOptions\NumberFieldOption;
@@ -11,8 +11,8 @@ use Botble\Base\Forms\Fields\NumberField;
 use Botble\Base\Forms\Fields\SelectField;
 use Botble\Base\Forms\Fields\TextField;
 use Botble\Base\Forms\FormAbstract;
-use MainaSuperintelligence\TiktokFeed\Http\Requests\TiktokVideoRequest;
-use MainaSuperintelligence\TiktokFeed\Models\TiktokVideo;
+use Maina888\TiktokFeed\Http\Requests\TiktokVideoRequest;
+use Maina888\TiktokFeed\Models\TiktokVideo;
 
 class TiktokVideoForm extends FormAbstract
 {

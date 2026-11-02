@@ -1,11 +1,11 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Models;
+namespace Maina888\TiktokFeed\Models;
 
 use Botble\Base\Casts\SafeContent;
 use Botble\Base\Enums\BaseStatusEnum;
 use Botble\Base\Models\BaseModel;
-use MainaSuperintelligence\TiktokFeed\Support\TiktokUrl;
+use Maina888\TiktokFeed\Support\TiktokUrl;
 
 class TiktokVideo extends BaseModel
 {

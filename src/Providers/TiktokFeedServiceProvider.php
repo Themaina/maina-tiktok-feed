@@ -1,6 +1,6 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Providers;
+namespace Maina888\TiktokFeed\Providers;
 
 use Botble\Base\Facades\DashboardMenu;
 use Botble\Base\Facades\PanelSectionManager;

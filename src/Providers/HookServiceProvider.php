@@ -1,12 +1,12 @@
 <?php
 
-namespace MainaSuperintelligence\TiktokFeed\Providers;
+namespace Maina888\TiktokFeed\Providers;
 
 use Botble\Base\Supports\ServiceProvider;
 use Botble\Ecommerce\Models\Product;
 use Botble\Theme\Events\RenderingSingleEvent;
 use Botble\Theme\Facades\Theme;
-use MainaSuperintelligence\TiktokFeed\Support\TiktokFeedHelper;
+use Maina888\TiktokFeed\Support\TiktokFeedHelper;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Support\Facades\Route;
 

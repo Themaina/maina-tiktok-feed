@@ -1,8 +1,8 @@
 <?php
 
 use Botble\Base\Facades\AdminHelper;
-use MainaSuperintelligence\TiktokFeed\Http\Controllers\Settings\TiktokFeedSettingController;
-use MainaSuperintelligence\TiktokFeed\Http\Controllers\TiktokVideoController;
+use Maina888\TiktokFeed\Http\Controllers\Settings\TiktokFeedSettingController;
+use Maina888\TiktokFeed\Http\Controllers\TiktokVideoController;
 use Illuminate\Support\Facades\Route;
 
 AdminHelper::registerRoutes(function (): void {
