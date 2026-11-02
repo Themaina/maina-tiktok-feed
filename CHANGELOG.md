@@ -11,7 +11,7 @@
 - The default shop link must be an `https://` address or a site path.
 - The admin list shows the video URL, cover and display order; the display order is no longer reset to 0 when editing.
 - Shop page options (shop listing, product, cart, checkout) only appear when the Ecommerce plugin is active, so the plugin works on sites without a shop.
-- Escape closes the panel.
+- Escape closes the panel, and the carousel now slides the right way in right-to-left languages.
 - Unit tests for link parsing.
 
 ## 1.0.0
