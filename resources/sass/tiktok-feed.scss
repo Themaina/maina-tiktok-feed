@@ -1,0 +1,454 @@
+.tf-widget {
+    --tf-toggle-size: 40px;
+    --tf-icon-size: 16px;
+    --tf-panel-width: 190px;
+    --tf-panel-width-mobile: 170px;
+
+    position: fixed;
+    z-index: 99990;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    &.tf-position-bottom-left {
+        bottom: 20px;
+        inset-inline-start: 20px;
+    }
+
+    &.tf-position-bottom-right {
+        bottom: 20px;
+        inset-inline-end: 20px;
+    }
+
+    &.tf-position-top-left {
+        top: 20px;
+        inset-inline-start: 20px;
+    }
+
+    &.tf-position-top-right {
+        top: 20px;
+        inset-inline-end: 20px;
+    }
+
+    &.tf-size-standard {
+        --tf-toggle-size: 50px;
+        --tf-icon-size: 22px;
+        --tf-panel-width: 240px;
+        --tf-panel-width-mobile: 210px;
+    }
+
+    &.tf-size-spacious {
+        --tf-toggle-size: 60px;
+        --tf-icon-size: 26px;
+        --tf-panel-width: 300px;
+        --tf-panel-width-mobile: 260px;
+    }
+
+    &.tf-dragging {
+        transition: none !important;
+
+        .tf-toggle {
+            cursor: grabbing;
+        }
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.tf-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--tf-toggle-size);
+    height: var(--tf-toggle-size);
+    border-radius: 50%;
+    border: none;
+    cursor: grab;
+    background: #010101;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+    touch-action: none;
+    padding: 0;
+    opacity: 0.9;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    animation: tf-pulse 2.8s ease-in-out infinite;
+
+    &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    .tf-widget.is-open & {
+        animation: none;
+    }
+}
+
+@keyframes tf-pulse {
+    0% {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22), 0 0 0 0 rgba(254, 44, 85, 0.45);
+    }
+
+    70% {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22), 0 0 0 8px rgba(254, 44, 85, 0);
+    }
+
+    100% {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22), 0 0 0 0 rgba(254, 44, 85, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tf-toggle {
+        animation: none;
+    }
+}
+
+.tf-toggle-icon {
+    position: relative;
+    width: var(--tf-icon-size);
+    height: var(--tf-icon-size);
+    display: block;
+}
+
+.tf-mark {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tf-mark-cyan,
+.tf-mark-pink {
+    display: none;
+}
+
+.tf-mark-white {
+    color: #fff;
+}
+
+.tf-panel {
+    position: absolute;
+    width: min(var(--tf-panel-width), calc(100vw - 24px));
+    aspect-ratio: 9 / 16;
+    max-height: 60vh;
+    background: #000;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+
+    .tf-position-bottom-left &,
+    .tf-position-top-left & {
+        inset-inline-start: 0;
+    }
+
+    .tf-position-bottom-right &,
+    .tf-position-top-right & {
+        inset-inline-end: 0;
+    }
+
+    .tf-position-bottom-left &,
+    .tf-position-bottom-right & {
+        bottom: calc(var(--tf-toggle-size) + 10px);
+        transform-origin: bottom;
+        transform: translateY(6px) scale(0.96);
+    }
+
+    .tf-position-top-left &,
+    .tf-position-top-right & {
+        top: calc(var(--tf-toggle-size) + 10px);
+        transform-origin: top;
+        transform: translateY(-6px) scale(0.96);
+    }
+}
+
+.tf-widget.is-open .tf-panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+.tf-close {
+    position: absolute;
+    top: 6px;
+    inset-inline-end: 6px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    cursor: pointer;
+
+    svg {
+        width: 11px;
+        height: 11px;
+    }
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.65);
+    }
+}
+
+.tf-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.tf-slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 100%;
+}
+
+.tf-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #000;
+}
+
+.tf-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 4;
+    opacity: 0.7;
+
+    svg {
+        width: 11px;
+        height: 11px;
+    }
+
+    &:hover {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.55);
+    }
+}
+
+.tf-nav-prev {
+    inset-inline-start: 5px;
+}
+
+.tf-nav-next {
+    inset-inline-end: 5px;
+}
+
+.tf-dots {
+    position: absolute;
+    bottom: 38px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    z-index: 4;
+}
+
+.tf-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 0;
+    cursor: pointer;
+
+    &.is-active {
+        background: #fff;
+        width: 10px;
+        border-radius: 4px;
+    }
+}
+
+.tf-overlay-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    display: flex;
+    gap: 5px;
+    padding: 14px 6px 8px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
+    pointer-events: none;
+
+    > * {
+        pointer-events: auto;
+    }
+}
+
+.tf-follow-btn,
+.tf-shop-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 5px 6px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    svg {
+        width: 11px;
+        height: 11px;
+        flex-shrink: 0;
+    }
+}
+
+.tf-follow-btn {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.24);
+    }
+
+    &.tf-follow-btn-icon {
+        flex: 0 0 auto;
+        width: 26px;
+        height: 26px;
+        padding: 0;
+        gap: 0;
+    }
+}
+
+.tf-shop-btn {
+    background: #fe2c55;
+    color: #fff !important;
+
+    &:hover {
+        background: #e0264b;
+    }
+}
+
+@media (max-width: 767px) {
+    .tf-widget.tf-hide-mobile {
+        display: none !important;
+    }
+
+    .tf-toggle {
+        width: calc(var(--tf-toggle-size) - 2px);
+        height: calc(var(--tf-toggle-size) - 2px);
+    }
+
+    .tf-panel {
+        width: min(var(--tf-panel-width-mobile), calc(100vw - 24px));
+
+        .tf-position-bottom-left &,
+        .tf-position-bottom-right & {
+            bottom: calc(var(--tf-toggle-size) + 6px);
+        }
+
+        .tf-position-top-left &,
+        .tf-position-top-right & {
+            top: calc(var(--tf-toggle-size) + 6px);
+        }
+    }
+}
+
+// Privacy mode: a cover with a play button stands in for the embed until the visitor taps it.
+.tf-slide {
+    position: relative;
+}
+
+.tf-facade {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    background: #111 center / cover no-repeat;
+    font: inherit;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.55));
+    }
+
+    &.is-loaded {
+        display: none;
+    }
+}
+
+.tf-facade-play {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    transition: transform 0.15s ease;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-inline-start: 2px;
+    }
+}
+
+.tf-facade:hover .tf-facade-play {
+    transform: scale(1.06);
+}
+
+.tf-facade-label {
+    position: relative;
+    max-width: 90%;
+    padding: 0 6px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+// Lift the widget above bottom navigation bars on phones (setting: mobile bottom offset).
+@media (max-width: 767px) {
+    .tf-widget.tf-position-bottom-left,
+    .tf-widget.tf-position-bottom-right {
+        bottom: var(--tf-mobile-bottom, 20px);
+    }
+}
